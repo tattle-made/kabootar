@@ -9,7 +9,7 @@ by adding `kabootar` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:kabootar, "~> 0.1.0"}
+    {:kabootar, git: "https://github.com/tattle-made/kabooatar", brainch: "main", depth: 1}
   ]
 end
 ```
