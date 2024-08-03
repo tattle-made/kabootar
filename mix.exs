@@ -7,7 +7,24 @@ defmodule Kabootar.MixProject do
       version: "0.0.1",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      name: "Kabootar",
+      source_url: "https://github.com/tattle-made/kabootar",
+      homepage_url: "https://tattle.co.in/products/kabootar",
+      docs: [
+        main: "Kabootar",
+        # logo: add logo here,
+        extras: [
+          "README.md",
+          "docs/contributor/functional-spec.md",
+          "docs/contributor/design-spec.md"
+        ]
+        # groups_for_extras: [
+        #   "Contributor Guides": Path.wildcard("docs/contributor/*.md")
+        # ]
+      ]
     ]
   end
 
@@ -21,8 +38,7 @@ defmodule Kabootar.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:ex_doc, "~> 0.34.2", only: :dev, runtime: false}
     ]
   end
 end
