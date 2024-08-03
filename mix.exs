@@ -5,10 +5,12 @@ defmodule Kabootar.MixProject do
     [
       app: :kabootar,
       description: "Build human-in-the-loop conversation bots",
-      licenses: ["GPL-3.0-only"],
-      links: %{
-        website: "https://tattle.co.in"
-      },
+      package: [
+        licenses: ["GPL-3.0-only"],
+        links: %{
+          website: "https://tattle.co.in"
+        }
+      ],
       version: "0.0.1",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
