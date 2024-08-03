@@ -1,5 +1,5 @@
 # Kabootar
-Build human-in-the-loop chat bots
+Build human-in-the-loop conversation bots
 
 ## Installation
 
