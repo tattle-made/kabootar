@@ -1,0 +1,18 @@
+name: New Release
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+    init:
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v4
+            - uses: erlef/setup-beam@v1
+              with:
+                otp-version: "26.0"
+                elixir-version: "1.15.7"
+            - run: mix deps.get
+            - run: mix test
+            - run: HEX_API_KEY=${{secrets.HEX_API_KEY}} mix hex.publish --yes
