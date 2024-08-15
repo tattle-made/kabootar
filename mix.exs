@@ -46,7 +46,8 @@ defmodule Kabootar.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.34.2", only: :dev, runtime: false},
-      {:versioce, "~> 2.0.0"}
+      {:versioce, "~> 2.0.0"},
+      {:libgraph, "~> 0.16.0"}
     ]
   end
 end
